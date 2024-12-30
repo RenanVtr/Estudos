@@ -12,6 +12,48 @@ header {
     text-align: center;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 1rem;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.sidebar-container ul{
+    list-style: none;
+}
+
+.sidebar-container ul li{
+    padding: 1rem;
+    -webkit-box-shadow: 13px 10px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 10px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 13px 10px 10px 0px rgba(0,0,0,0.75);
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+    background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+
+    
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -27,8 +69,36 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
+.container {
+    display: flex;
+}
+
+aside {
+    width: 15%;
+    background-color: #f4f4f4;
     padding: 2rem;
+    text-align: left;
+}
+
+main {
+    width: 85%;
+    padding: 2rem;
+    position: relative;
+}
+
+main::before {
+    content: "";
+    background-image: url('assets/Foto-3-geral.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Define a transparência da imagem */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
 }
 
 section {
